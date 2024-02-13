@@ -1,0 +1,38 @@
+.outher {
+  background-color: brown;
+  width: 500px;
+  height: 500px;
+}
+.inner {
+  background-color: gray;
+  width: 50%;
+  height: 50%;
+  animation-name: travel;/* animasyonun ad */
+  animation-duration: 2s;/* animasyonun süresi yani benin belirlediğim süre içinde hareket edecek */
+  animation-timing-function: ease-in-out;/* hareketin şekli yani hareket yavaş , başta yavaş sonda yavaş gibi */
+  animation-delay: 2s;/* gecikme süresi */
+  animation-iteration-count: 3;/* animasyonun tekrar sayısı */
+  animation-direction: alternate ;/* animasyonun yönü reverse tersten oynatır, alternate dersem gider gittiği yoldan geridöner*/
+  /*animation-fill-mode: forwards;  forwards ile bittiği yerde kalır, */
+  /* animation-fill-mode: backwards; animasyonun başladığı zamanki değerleleri değilde keyframes de belirttiğim derleri almasını istiyorsam backwards kullanırım */
+  /* both dersem bu iki özelliğide içerir. yani forw.. gibi bittiği yerde kalır ve backw.. gibi bu örnekteki sarı rengi ile başalr */
+  animation-fill-mode: both;
+
+
+}
+@keyframes travel {
+  0% {
+    transform: translate(0);
+    background-color: yellow;
+  }
+  25% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translateX(100%);
+    background-color: fuchsia;
+  }
+}
